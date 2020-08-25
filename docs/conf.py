@@ -18,8 +18,8 @@
 # -- Project information -----------------------------------------------------
 
 project = 'MIT News Classify'
-copyright = '2020, Arun Wongprommoon, Jamie Fu, Haimoshri Das, Jianna Liu'
-author = 'Arun Wongprommoon, Jamie Fu, Haimoshri Das, Jianna Liu'
+copyright = '2020, Tegmark Group'
+author = 'Arun Wongprommoon, Jamie Fu, Haimoshri Das, Jianna Liu, Max Tegmark'
 
 # The full version, including alpha/beta/rc tags
 release = '1.0'
