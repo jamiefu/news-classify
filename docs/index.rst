@@ -8,9 +8,9 @@ Welcome to MIT News Classify's documentation!
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
-   installation
-   usage
+   :glob:
+   
+   *
 
 
 Indices and tables
