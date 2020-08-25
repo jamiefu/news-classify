@@ -6,6 +6,7 @@ There are several models released in the package, including TF-IDF, TF-IDF bigra
 GPT-2, and more to come soon. 
 
 To use one of the models to classify a piece of text, simply import it:
+
 .. code-block:: python
 
     from mitnewsclassify import tfidf
@@ -16,12 +17,14 @@ From there we can get the hidden features or the a set of classified tags
 for a piece of text we provide it. 
 
 To get the hidden features from TF-IDF, for example:
+
 .. code-block:: python
 
     text = "This is a sample piece of text."
     features = tfidf.getfeatures(text)
 
 To get the classified tags from TF-IDF:
+
 .. code-block:: python
 
     text = "This is a sample piece of text."
