@@ -11,7 +11,7 @@ Once a new article is fed into the Ensemble model, the article gets run through 
 gettags
 -----------------
 
-*class* mitnewsclassify.ensemble.gettags(txt)
+``class mitnewsclassify.ensemble.gettags(txt)``
 
 Gets the predicted tags for a given article text.
 

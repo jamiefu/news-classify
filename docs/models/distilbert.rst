@@ -2,7 +2,11 @@
 DistilBERT
 ========
 
-The DistilBERT model applies huggingface's implementation of Victor Sanh, Lysandre Debut, Julien Chaumond and Thomas Wolf: “DistilBERT, a distilled version of BERT: smaller, faster, cheaper and lighter”, a large transformer-based language model which embeds an entire document into a vector, usually to perform various natural language processing tasks. The model is trained using [HYPERPARAMETERS], and is saved on our server.
+The DistilBERT model applies `huggingface's <https://huggingface.co/transformers/model_doc/gpt2.html>`_ implementation of 
+`Victor Sanh, Lysandre Debut, Julien Chaumond and Thomas Wolf: “DistilBERT, a distilled version of BERT: smaller, faster, cheaper and lighter” <https://arxiv.org/pdf/1910.01108.pdf>`_, 
+a large transformer-based language model which embeds an entire document into a vector, 
+usually to perform various natural language processing tasks. The model is trained using 
+[HYPERPARAMETERS], and is saved on our server.
 
 Once a new article is fed into the DistilBERT model, the article gets embedded through the saved model. The output is then run through a deep neural network to produce the predicted tags for the article. Due to the limits of time, our package does not support gettags at the moment.
 
@@ -11,7 +15,7 @@ Once a new article is fed into the DistilBERT model, the article gets embedded t
 getfeatures
 -----------------
 
-*class* mitnewsclassify.distilbert.getfeatures(txt)
+``class mitnewsclassify.distilbert.getfeatures(txt)``
 
 Gets the output from the saved GPT2 model before it gets fed into the neural network to obtain a classification for a given article text.
 

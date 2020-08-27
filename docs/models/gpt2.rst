@@ -2,7 +2,11 @@
 GPT-2
 ========
 
-The GPT2 model applies huggingface's implementation of Alec Radford, Jeffrey Wu, Rewon Child, David Luan, Dario Amodei and Ilya Sutskever: "Language Models are Unsupervised Multitask Learners", a large transformer-based language model which embeds an entire document into a vector, usually to perform various natural language processing tasks. The model is trained using [HYPERPARAMETERS], and is saved on our server.
+The GPT2 model applies `huggingface's <https://huggingface.co/transformers/model_doc/gpt2.html>`_ 
+implementation of `Alec Radford, Jeffrey Wu, Rewon Child, David Luan, Dario Amodei and Ilya Sutskever: "Language Models are Unsupervised Multitask Learners" <https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf>`_, 
+a large transformer-based language model which embeds an entire document into a vector, 
+usually to perform various natural language processing tasks. The model is trained using 
+[HYPERPARAMETERS], and is saved on our server.
 
 Once a new article is fed into the GPT2 model, the article gets embedded through the saved model. The output is then run through a deep neural network to produce the predicted tags for the article.
 
@@ -11,7 +15,7 @@ Once a new article is fed into the GPT2 model, the article gets embedded through
 gettags
 -----------------
 
-*class* mitnewsclassify.gpt2.gettags(txt)
+``class mitnewsclassify.gpt2.gettags(txt)``
 
 Gets the predicted tags for a given article text.
 
@@ -42,7 +46,7 @@ Gets the predicted tags for a given article text.
 getfeatures
 -----------------
 
-*class* mitnewsclassify.gpt2.getfeatures(txt)
+``class mitnewsclassify.gpt2.getfeatures(txt)``
 
 Gets the output from the saved GPT2 model before it gets fed into the neural network to obtain a classification for a given article text.
 

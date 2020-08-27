@@ -2,7 +2,10 @@
 Doc2Vec
 ========
 
-The Doc2Vec model applies gensim's implementation of Quoc Le and Tomas Mikolov: “Distributed Representations of Sentences and Documents”, which embeds an entire document into a vector based on the pattens of words that occur next to one another. The model is trained using 5 neighbors, 10 epochs and vectors of size 2000, and is saved on our server.
+The Doc2Vec model applies `gensim's <https://radimrehurek.com/gensim/models/doc2vec.html>`_ 
+implementation of Quoc Le and `Tomas Mikolov: “Distributed Representations of Sentences and Documents” <https://arxiv.org/pdf/1405.4053v2.pdf>`_, 
+which embeds an entire document into a vector based on the pattens of words that occur next to one another. 
+The model is trained using 5 neighbors, 10 epochs and vectors of size 2000, and is saved on our server.
 
 Once a new article is fed into the Doc2Vec model, the article gets embedded through the saved model as if it were a new article in the New York Times Annotated Corpus. The output is then run through two layers of neural network (size 1200 and 800 respectively) to produce the predicted tags for the article.
 
@@ -13,7 +16,7 @@ Due to the nature of the model, outputs on the same input are not guaranteed to 
 gettags
 -----------------
 
-*class* mitnewsclassify.doc2vec.gettags(txt)
+``class mitnewsclassify.doc2vec.gettags(txt)``
 
 Gets the predicted tags for a given article text.
 
@@ -29,10 +32,14 @@ Gets the predicted tags for a given article text.
 
     >>> from mitnewsclassify import doc2vec
 
-    >>> doc2vec.gettags("Republicans proceeded with the third night of their national convention, but many Americans — particularly those in the path of Hurricane Laura — were focused on more immediate concerns.")
+    >>> doc2vec.gettags("Republicans proceeded with the third night of their national convention, 
+        but many Americans — particularly those in the path of Hurricane Laura — were focused on 
+        more immediate concerns.")
     []
 
-    >>> doc2vec.gettags("The Milwaukee Bucks chose to boycott their Wednesday matchup against the Orlando Magic in protest of the police shooting of Jacob Blake, a 29-year-old Black man, in Wisconsin.")
+    >>> doc2vec.gettags("The Milwaukee Bucks chose to boycott their Wednesday matchup against the 
+        Orlando Magic in protest of the police shooting of Jacob Blake, a 29-year-old Black man, 
+        in Wisconsin.")
     ['demonstrations and riots']
 
     >>> doc2vec.gettags("One superspreading event may be connected to about 20,000 Covid-19 cases in the Boston area, a researcher said on Tuesday. That event, a biotech conference attended by 200 people in late February, is now well known as a source of Covid-19 spread very early on in the pandemic. Here is how a virus spreads Here is how a virus spreads 01:45 'Ultimately, more than 90 cases were diagnosed in people associated with this conference or their contacts, raising suspicion that a superspreading event had occurred there,' the researchers wrote in their study. Superspreading occurs when one or a few infected people cause a cascade of transmissions of an infectious disease. The new study -- which has not yet been peer-reviewed but was posted to the online server medrxiv.org on Tuesday -- involved analyzing the impact of early superspreading events in the Boston area and provided 'direct evidence' that superspreading can profoundly alter the course of an epidemic. 'An unfortunate perfect storm' The researchers -- from the Broad Institute of MIT and Harvard in Cambridge and other various institutions -- conducted genetic analyses of coronavirus specimen samples in Massachusetts. The researchers sequenced and analyzed 772 complete genomes of the virus from the region. They found 80 introductions of the virus into the Boston, predominantly from elsewhere in the United States and Europe, and 'hundreds of cases from major outbreaks' in various settings, including the conference. Coronavirus quickly spread around the world starting late last year, new genetic analysis shows Coronavirus quickly spread around the world starting late last year, new genetic analysis shows The conference, held from February 26 to 27, was a 'perfect storm' and the superspreading there could have been connected to approximately 20,000 cases, Bronwyn MacInnis, a researcher at the Broad Institute who worked on the study, told CNN in an email on Tuesday. 'Many factors made the conference an unfortunate perfect storm as a superspreading event. That the virus was introduced at the conference at all was unlucky,' MacInnis wrote in the email. 'This is not a rigorous estimate but does communicate the scale,' MacInnis added. 'If tens of thousands of individuals seems large, it is important to point out that it is in context of a pandemic that has infected tens of millions of people.' Unseen Covid-19 cases began early, spread fast Unseen Covid-19 cases began early, spread fast 03:00 Timing was crucial. In late February, people were not yet aware of the pandemic risk. 'When it happened was critical: it was scheduled just as we were collectively beginning to appreciate the imminent threat of COVID at home--if it had been a week later the event likely would have been cancelled,' MacInnis wrote in the email. 'Also, because it happened early in the epidemic it had the chance to spread widely before extensive testing capacity, shutdowns, social distancing, and masking were in place,' she wrote. 'The other critical factor was the population the virus landed in: people who had come from many different places (including some where COVID was already circulating), and who then returned home, often unknowingly bringing the virus with them.' 'A much greater understanding of how easily and quickly this virus can be transmitted' While the researchers did not identify the conference in their study, The Boston Globe on Tuesday said it was an international meeting of leaders from the biotechnology company Biogen at the Marriott Long Wharf hotel in Boston. How 53 members of this choir were infected in &#39;super spreader&#39; event How 53 members of this choir were infected in 'super spreader' event 03:03 'February 2020 was nearly a half year ago, and was a period when general knowledge about the coronavirus was limited,' Biogen said in a written statement to CNN on Tuesday. 'We were adhering closely to the prevailing official guidelines. We never would have knowingly put anyone at risk. When we learned a number of our colleagues were ill, we did not know the cause was COVID-19, but we immediately notified public health authorities and took steps to limit the spread.' The company noted in its statement that it joined a collaboration with the Broad Institute in April to share biological and medical data to advance knowledge around Covid-19. 'The world today has a much greater understanding of how easily and quickly this virus can be transmitted, and we are proud to contribute through this collaboration to the global effort to overcome COVID-19,' it said. Who or what is a super spreader? Dr. Sanjay Gupta&#39;s coronavirus podcast for June 18 explains. Who or what is a super spreader? Dr. Sanjay Gupta's coronavirus podcast for June 18 explains. Massachusetts Governor Charlie Baker said in a news conference on Tuesday that he saw the Biogen conference in February as a 'seminal event' in the coronavirus pandemic for the Boston area. 'I was criticized actually for saying a few months ago that the Biogen event was a seminal event with respect to corona here in the Commonwealth and I couldn't put a number on it at that point in time,' Baker said. 'This is no offense to anybody, but at that point in time, nobody was wearing masks, nobody was social distancing, nobody was even behaving with concern about the presence of the virus at all. I mean all rules of the game with respect to that have changed,' Baker said. 'It speaks to the power of that virus to move from one person to another to another.' Get CNN Health's weekly newsletter Sign up here to get The Results Are In with Dr. Sanjay Gupta every Tuesday from the CNN Health team. The new pre-print study also investigated the spread of the coronavirus in other settings across the Boston area, including a skilled nursing facility -- where 85% of residents and 37% of staff tested positive -- and a homeless shelter -- where the coronavirus was introduced seven times, including four that resulted in clusters of cases, according to the study. 'Our findings repeatedly highlight the close relationships between seemingly disconnected groups and populations: viruses from international business travel seeded major outbreaks among individuals experiencing homelessness, spread throughout the Boston area, and were exported to other domestic and international sites,' the researchers wrote in the study.")
@@ -44,7 +51,7 @@ Gets the predicted tags for a given article text.
 getfeatures
 -----------------
 
-*class* mitnewsclassify.doc2vec.getfeatures(txt)
+``class mitnewsclassify.doc2vec.getfeatures(txt)``
 
 Gets the values of the second layer in the neural network for a given article text.
 

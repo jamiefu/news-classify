@@ -11,7 +11,7 @@ Once a new article is fed into the TF-IDF model, the article gets transformed by
 gettags
 -----------------
 
-*class* mitnewsclassify.tfidf.gettags(txt)
+``class mitnewsclassify.tfidf.gettags(txt)``
 
 Gets the predicted tags for a given article text.
 
@@ -42,7 +42,7 @@ Gets the predicted tags for a given article text.
 getfeatures
 -----------------
 
-*class* mitnewsclassify.tfidf.getfeatures(txt)
+``class mitnewsclassify.tfidf.getfeatures(txt)``
 
 Gets the values of the second layer in the neural network for a given article text.
 

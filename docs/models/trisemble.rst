@@ -11,7 +11,7 @@ Once a new article is fed into the Trisemble model, the article gets run through
 gettags
 -----------------
 
-*class* mitnewsclassify.trisemble.gettags(txt)
+``class mitnewsclassify.trisemble.gettags(txt)``
 
 Gets the predicted tags for a given article text.
 
