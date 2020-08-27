@@ -29,7 +29,12 @@ For a full list of models and their documention, see the documentation under Pac
    models/tf-idf_bi
    models/doc2vec
    models/gpt2
+   models/distilbert
    models/ensemble
+   models/trisemble
+   models/quadsemble
+   download
+   aliases
 
 .. toctree::
    :maxdepth: 2
