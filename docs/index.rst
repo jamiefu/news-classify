@@ -12,8 +12,28 @@ It was developed in Summer 2020 as a tool for topic classification using NLP wit
 Some of its models have been integrated into the Tegmark Group's other projects, such as `Improve The News
 <improvethenews.org>`_.
 
+For a full list of models and their documention, see :ref:`Models <models>`.
+
 .. toctree::
    :maxdepth: 2
-   :glob:
+   :caption: Get Started
    
-   *
+   installation
+   usage
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Package Reference
+   
+   models/tf-idf
+   models/tf-idf_bi
+   models/doc2vec
+   models/gpt2
+   models/ensemble
+
+.. toctree::
+   :maxdepth: 2
+   :caption: More Information
+   
+   authors
+   faq
