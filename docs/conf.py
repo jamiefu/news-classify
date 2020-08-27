@@ -21,7 +21,7 @@ import sphinx_rtd_theme
 
 project = 'MIT News Classify'
 copyright = '2020, Tegmark Group'
-author = 'Arun Wongprommoon, Jamie Fu, Haimoshri Das, Jianna Liu, Max Tegmark'
+author = 'Jamie Fu'
 
 # The full version, including alpha/beta/rc tags
 release = '1.0'
