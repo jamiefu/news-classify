@@ -10,14 +10,15 @@ MIT News Classify is a package containing several natural language processing (N
 that have been finetuned on the NYT Annotated Corpus and its predefined news tags.
 It was developed in Summer 2020 as a topic classification tool using NLP with the Tegmark Group at MIT. 
 Some of its models have been integrated into the Tegmark Group's other projects, such as `Improve The News
-<improvethenews.org>`_.
+<improvethenews.org>`_. We have now released it as a package for public use, to aid you in all of your 
+news classification needs!
 
 See Installation and Usage to get started! 
 For a full list of models and their documention, see the documentation under Package Reference.
 
 .. toctree::
    :maxdepth: 2
-   :caption: quickstart
+   :caption: Quickstart
    
    installation
    usage
@@ -40,7 +41,7 @@ For a full list of models and their documention, see the documentation under Pac
    aliases
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: More Information
    
    authors
