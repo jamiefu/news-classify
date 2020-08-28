@@ -25,12 +25,16 @@ For a full list of models and their documention, see the documentation under Pac
 
 .. toctree::
    :maxdepth: 1
-   :caption: Package Reference
+   :caption: The Good Stuff
    
    models/quadsemble
    models/trisemble
    models/ensemble
-   
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Other Models & Package Reference
+
    models/tf-idf
    models/tf-idf_bi
    models/doc2vec
